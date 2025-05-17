@@ -1,0 +1,27 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Post</title>
+  <link rel="stylesheet" href="/css/createPost.css"> <!-- ✅ RIGHT HERE -->
+</head>
+
+
+<div class="posts">
+  <form action="/createPost" method="POST">
+    <div class="post-header">
+      <h4>by:</h4>
+      <h3 class="user-names"><a href="/profile">{{username}}</a></h3>
+      <div class="input">
+        <input type="text" name="topic" placeholder="Topic" required>
+      </div>
+    </div>
+
+    <div class="input-post">
+      <input type="text" name="content" placeholder="Post" required>
+    </div>
+
+    <div class="post-footer">
+      <button type="submit" class="submit">Submit</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,465 @@
+@font-face {
+    font-family: Domine;
+    src: url(../fonts/Domine-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Domine-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Bubble;
+    src: url(../fonts/Rubik_Bubbles/RubikBubbles-Regular.ttf);
+}
+
+body{
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+
+/* yung profile log out */
+.dropdown button{
+    display: inline-block;
+}
+
+.dropdown:hover .content {
+    display: block;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    background-color: #ffe8f3;
+    color: rgb(0, 0, 0);
+    text-align: start;
+    font-family: Domine;
+    padding: 10px 20px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100px;
+    
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown button { /* yung logo */
+    background-color: #ffe8f3;
+    border: 1px solid #ffe8f3;
+    cursor: pointer;
+}
+
+.content { /* mga user profile eme */
+    position: absolute;
+    background-color: rgb(187, 187, 187);
+    min-width: 100px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1;
+}
+
+.dropdown:hover .content {
+    display: block;
+}
+
+.heading a {
+    display: block;
+    background-color: #ffe8f3;
+    color: rgb(0, 0, 0);;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.dropdown .content a{
+    font-family: Roboto;
+    font-weight: bold;
+    transition: background-color .3s;
+
+}
+
+.heading a:hover {
+    background-color: #743f62;
+    color: white;
+}
+
+
+/* yung search bar */
+.search{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 40px;
+    background-color: #ffffff;
+    transition: background-color .3s;
+    margin-left: 75px;
+}
+
+.search-input{
+    font-size: 15px;
+    font-family: Roboto, sans-serif;
+    margin-left: 10px;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.search:focus-within{
+    background: #fff8fc;
+}
+
+
+.heading .post-creation{
+    display: flex;
+    border-radius: 10px;
+    padding: 3px 3px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 30px;
+    background: white;
+    text-align: center;
+    font-family: Roboto;
+}
+.heading .post-creation .btn{
+    background-color: #ff66c4;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.heading .post-creation .btn:hover{
+    background-color: #ffe8f3;
+    color: black;
+}
+
+
+
+/* navigation bar */
+.navBar{
+    margin-left: 50px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+}
+.navBar ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.navBar li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+
+    
+}
+
+.navBar a{
+    text-decoration: none;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    font-family: Bubble;
+    
+    justify-content: center;
+    
+    font-size: 30px;
+    height: 100%;
+    color: #743f62;
+    transition: background-color .3s;
+    width: 150px;
+
+}
+.navBar a:hover{
+    background-color: #743f62;
+}
+
+.navBar li{
+    float: left;
+}
+
+/* Pagination */
+
+
+
+.pagination {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically (if needed) */
+    padding: 10px;
+    gap: 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%); /* Ensures perfect centering */
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 5px 10px; /* Optional: Adds background */
+}
+
+
+.pagination a{
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+.pagination a.active{
+    background-color: #ff66c4;
+    color: white;
+    border: 1px solid #000000;
+    font-weight: bold;
+}
+.pagination a:not(.active){
+    background-color: #ffe8f3;
+    border: 1px solid #743f62;
+    font-weight: bold;
+}
+.pagination a:hover:not(.active){
+    background-color: #743f62;
+    color: white;
+    font-weight: bold;
+}
+
+/* FEED */
+
+.cont {
+     /* Let it take full width */
+    width: 50%; /* Reduce spacing */
+    text-align: left;
+    background-color: #fff8fb;
+    border: 2px solid #412236;
+    border-radius: 10px;
+    margin: 50px auto;
+}
+
+.posts-header {
+    display: flex;
+    flex-direction: row; /* Stack the "by:" text and name vertically */
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+.posts-header .user{
+    margin-left: 10px;
+}
+
+.posts-header .user-name{
+    margin-left: 10px;
+
+}
+
+.posts-header .posts-title{
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+
+
+
+/* box of the post content */
+.posts-body {
+    width: auto;
+    height: auto;
+    background-color: #ffffff; /* White background */
+    border: 2px solid #412236; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Spacing inside the box */
+    margin: 10px; /* Space outside the box */
+    max-height: 150px;
+    overflow-y: auto;       /* scroll vertically when content exceeds height */
+  overflow-x: hidden;     /* hide horizontal overflow */
+  word-wrap: break-word;
+}
+
+.posts-content{
+    font-family: Roboto;
+}
+
+/* contains emojis and the such */
+.posts-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 10px 20px;
+}
+
+#posts-date {
+    margin: 0;
+}
+
+.posts-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.posts-actions .comment{
+    background-color: #ff66c4;
+    color: white;
+    border: none;
+    padding: 5px 30px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.posts-actions .comment:hover{
+    background-color: #412236;
+    color: rgb(255, 255, 255);
+}
+
+.posts-actions .like::after {
+    content: "💟";
+    display: inline-block;
+    font-size: 18px; /* Adjust size */
+   
+    
+}
+.posts-actions .like{
+    background-color: #ffffff;
+    padding: 5px 5px;
+    border-radius: 10px;
+    font-size: 14px;
+    
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.posts-actions .like:hover{
+    background-color: #87ff83;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.posts-actions .dislike::after {
+    content: "💔";
+    display: inline-block;
+    font-size: 18px; /* Adjust size */
+}
+
+.posts-actions .dislike{
+    background-color: #ffffff;
+    padding: 5px 5px;
+    border-radius: 10px;
+    font-size: 14px;
+    
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.posts-actions .dislike:hover{
+    background-color: #ff8787;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+h3{
+    font-family: Roboto;
+    color: #727272;
+
+  
+}
+
+.comment-header{
+    margin-left: 20px;
+}
+
+
+
+.comment-section {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    width: 90%;
+    margin: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.comment-section textarea{
+    width: 80%;
+    height: 80px;
+    
+    border-radius: 5px;
+    padding: 5px;
+    resize: none;
+    font-family: Arial, sans-serif;
+}
+
+.comment-section textarea:focus {
+    border-color: #47062e; /* This color will match the button color for consistency */
+    outline: none; /* Removes the default browser outline */
+}
+
+.comment-section button {
+    align-self: flex-end;
+    background-color: #ff66c4;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .3s;
+    margin-top: 5px;
+    margin-left: 55px
+}
+
+.comment-section button:hover {
+    background-color: #412236;
+    color: rgb(255, 255, 255);
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 20px;
+}
+
+.comment-list li {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.comment-list li p {
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.comment-date {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 4px;
+  }

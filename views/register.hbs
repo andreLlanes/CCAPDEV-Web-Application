@@ -1,0 +1,33 @@
+{{! register.hbs - uses 'authLayout' instead of 'main' }}
+{{! Tell Handlebars to use auth layout }}
+{{! At the top of this file: }}
+{{! You don't need to define layout in every file if you render it with `res.render('register', { layout: 'authLayout' })` }}
+
+<div class="container">
+    <div class="register">
+        <img src="/images/Logo_gamehub.png" id="logo" alt="Anby" width="75px">   
+    </div>
+
+    <h1 id="web-name">QuestHub</h1>
+
+    <div class="user-login">
+        <form action="/register" method="POST">
+            <div class="input">
+                <label for="email">Email Address</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+
+            <div class="input">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+
+        <p style="margin-top: 20px;">Already have an account? <a href="/login">Login</a></p>
+    </div>
+</div>

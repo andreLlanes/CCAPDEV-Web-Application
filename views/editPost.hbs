@@ -1,0 +1,25 @@
+<div class="posts" style="width: 80%; max-width: 600px; margin-top: 20px; padding: 20px;">
+    <h2>Edit Post</h2>
+    <form action="/posts/{{post._id}}/edit" method="POST">
+        <label for="topic">Topic:</label><br>
+        <input 
+            type="text" 
+            name="topic" 
+            id="topic" 
+            value="{{post.topic}}" 
+            required 
+            style="width: 100%; box-sizing: border-box; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;"
+        ><br><br>
+
+        <label for="content">Content:</label><br>
+        <textarea 
+            name="content" 
+            id="content" 
+            rows="5" 
+            required 
+            style="width: 100%; box-sizing: border-box; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;"
+        >{{post.content}}</textarea><br><br>
+
+        <button type="submit" id="edit">save</button>
+    </form>
+</div>

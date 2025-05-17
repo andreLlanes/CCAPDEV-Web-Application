@@ -1,0 +1,324 @@
+@font-face {
+    font-family: Domine;
+    src: url(../fonts/Domine-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Domine-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Domine;
+    src: url(../fonts/Domine-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Bubble;
+    src: url(../fonts/Rubik_Bubbles/RubikBubbles-Regular.ttf);
+}
+
+body{
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+
+/* yung profile log out */
+.dropdown button{
+    display: inline-block;
+}
+
+.dropdown:hover .content {
+    display: block;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    background-color: #ffe8f3;
+    color: rgb(0, 0, 0);
+    text-align: start;
+    font-family: Domine;
+    padding: 10px 20px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100px;
+    
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown button { /* yung logo */
+    background-color: #ffe8f3;
+    border: 1px solid #ffe8f3;
+    cursor: pointer;
+}
+
+.content { /* mga user profile eme */
+    position: absolute;
+    background-color: rgb(187, 187, 187);
+    min-width: 100px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1;
+}
+
+.dropdown:hover .content {
+    display: block;
+}
+
+.heading a {
+    display: block;
+    background-color: #ffe8f3;
+    color: rgb(0, 0, 0);;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.dropdown .content a{
+    font-family: Roboto;
+    font-weight: bold;
+    transition: background-color .3s;
+
+}
+
+.heading a:hover {
+    background-color: #743f62;
+    color: white;
+}
+
+
+/* yung search bar */
+.search{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 40px;
+    background-color: #ffffff;
+    transition: background-color .3s;
+    margin-left: 75px;
+}
+
+.search-input{
+    font-size: 15px;
+    font-family: Roboto, sans-serif;
+    margin-left: 10px;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.search:focus-within{
+    background: #fff8fc;
+}
+
+
+.heading .post-creation{
+    display: flex;
+    border-radius: 10px;
+    padding: 3px 3px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 30px;
+    background: white;
+    text-align: center;
+    font-family: Roboto;
+}
+.heading .post-creation button{
+    background-color: #ff66c4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.heading .post-creation button:hover{
+    background-color: #ffe8f3;
+    color: black;
+}
+
+
+
+/* navigation bar */
+.navBar{
+    margin-left: 50px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+}
+.navBar ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.navBar li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+
+    
+}
+
+.navBar a{
+    text-decoration: none;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    font-family: Bubble;
+    
+    justify-content: center;
+    
+    font-size: 30px;
+    height: 100%;
+    color: #743f62;
+    transition: background-color .3s;
+    width: 150px;
+
+}
+.navBar a:hover{
+    background-color: #743f62;
+}
+
+.navBar li{
+
+    float: left;
+}
+
+
+/* FEED */
+
+.posts{
+    width: 50%;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 100px auto;
+    flex-direction: column;
+    background-color: #fff8fb;
+    border: 3px #412236 solid;
+    border-radius: 20px;
+    box-shadow: 5px 5px  #412236;
+}
+
+.post-header {
+    display: flex;
+    flex-direction: row; /* Stack the "by:" text and name vertically */
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 10px;
+    width: 100%;
+}
+
+
+
+.posts h4{
+    font-family: Roboto;
+    color: #000000;
+    text-align: left;
+    font-size: 15px;
+    margin-left: 10px;
+    padding-top: 2px;
+}
+.posts .user-names{
+    font-family: Roboto;
+    color: #727272;
+    text-align: left;
+    margin-left: 7px;
+}
+
+.posts .post-header .post-title{
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: border-color 0.3s, background-color 0.3s;
+    cursor: text;
+}
+
+.posts .post-header .post-title:hover {
+    border-color: #ccc;
+    background-color: #f9f9f9;
+}
+
+.input-post {
+    width: 80%;
+    height: 100%;
+    padding: 10px;
+    font-size: 15px;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.input-post input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 2px solid #743f62;
+    margin-left: 50px;
+}
+
+.submit{
+    align-self: flex-end;
+    background-color: #ff66c4;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .3s;
+    margin-top: 5px;
+    margin-left: 55px;
+    margin-bottom: 5px;
+}
+
+.submit:hover {
+    background-color: #412236;
+    color: rgb(255, 255, 255);
+}
+
+
+/* title topic */
+
+.input {
+    margin-left: 5%; 
+    width: 100%; 
+    height: 100%;
+    padding: 10px;
+    font-size: 15px;
+    box-sizing: border-box; 
+   
+}
+.input input {
+    width: 100%;
+    height: 100%; 
+    padding: 15px;
+    font-size: 1rem; 
+    border-radius: 5px;
+    text-align: left;
+    border: 2px solid #743f62;
+}

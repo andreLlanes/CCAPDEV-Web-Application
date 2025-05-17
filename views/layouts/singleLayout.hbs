@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuestHub - Home</title>
+  <link rel="stylesheet" href="/css/profile.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+</head>
+<body>
+
+    <header>
+            <div class="heading">
+                <div class="dropdown">
+                    <button><img src="/images/Logo_gamehub.png" alt="logo" width="75px"></button>
+                    <div class="content">
+                        <a href="/profile">Profile</a>
+                        <a href="/logout">Log out</a>
+                    </div>
+                </div>
+                
+                <h1>QuestHub</h1>
+    
+                <form action="/home" method="GET">
+                    <div class="search">
+                        <span class="material-symbols-outlined">search</span>
+                        <input 
+                            class="search-input" 
+                            type="text" 
+                            name="search" 
+                            placeholder="Search . . ." 
+                            value="{{searchQuery}}"
+                        >
+                    </div>
+                </form>
+    
+                <nav class="navBar">
+                    <ul>
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>        
+                    </ul>
+                </nav>
+    
+                <div class="post-creation">
+                    <a href="/create" class="btn">+ Post</a>
+                </div>
+    
+            </div> 
+    
+            
+    
+    </header>
+
+
+
+
+    <main>{{{body}}}</main>
+    <script src="/js/comments.js"></script>
+</body>
+</html>

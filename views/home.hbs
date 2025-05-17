@@ -1,0 +1,71 @@
+
+        {{#each posts}}
+        <div class="cont js-posts-grid" data-postid="{{this._id}}">
+            <div class="posts-header">
+                <h4 class="user">user: </h4>
+                <h3 class="user-name"><a href="/profile/{{this.author._id}}">{{this.author.username}}</a></h3>
+                <h3 class="posts-title">{{this.topic}}</h3>
+            </div>
+
+            <div class="posts-body">
+                <p class="posts-content">{{this.content}}</p>
+            </div>
+
+            <div class="posts-footer">
+                <p class="posts-date">Posted on: {{formatDate this.creation}}</p>
+                <div class="posts-actions">
+                    <button class="like" data-id="{{this._id}}">
+                        (<span class="like-count">{{this.likes.length}}</span>)</button>                   
+                    <button class="dislike" data-id="{{this._id}}">
+                        (<span class="dislike-count">{{this.dislikes.length}}</span>)</button>                    
+                    <button class="comment">comment</button>
+                </div>  
+            </div>
+
+           <form class="comment-form" data-postid="{{this._id}}">
+                <div class="comment-section" style="display: none;">
+                    <textarea name="content" placeholder="Write a comment..." required></textarea>
+                    <button type="submit">Post</button>
+                </div>
+            </form>
+
+            <h3 class="comment-header">Comments:</h3>
+            <ul class="comment-list">
+                  {{#each this.comments}}
+                    <li>
+                    <strong>
+                        {{#if user.username}}
+                        {{user.username}}:
+                        {{else}}
+                        [No username]
+                        {{/if}}
+                    </strong>
+                    {{#if content}}
+                        {{content}}
+                        <p class="comment-date">Posted on: {{formatDate this.createdAt}}</p>
+                    {{else}}
+                        [No content]
+                    {{/if}}
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+        {{/each}}
+
+
+
+             <div class="pagination">
+                {{#if (gt currentPage 1)}}
+                    <a href="/home?page={{subtract currentPage 1}}"><</a>
+                {{/if}}
+
+                {{#each (range 1 totalPages)}}
+                    <a href="/home?page={{this}}" class="{{#ifEquals ../currentPage this}}active{{/ifEquals}}">{{this}}</a>
+                {{/each}}
+
+                {{#if (lt currentPage totalPages)}}
+                    <a href="/home?page={{add currentPage 1}}">></a>
+                {{/if}}
+            </div>
+        
+  

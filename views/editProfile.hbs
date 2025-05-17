@@ -1,0 +1,16 @@
+<div style="padding: 10px; margin-top: 30px; width: 60%;" class="posts">
+  <h2 style="margin-left: 20px;">Edit Your Profile</h2>
+  <form action="/profile/edit" method="POST" enctype="multipart/form-data">
+
+    <h3 style="margin-left: 20px;">Bio:</h3>
+    <textarea style="width: 95%; height: 50px; margin:0 10px;" name="bio">{{user.bio}}</textarea>
+
+    <div style="display: flex; align-items: center; gap: 10px; margin: 10px;">
+      <h3 style="margin: 0;">Profile Picture:</h3>
+      <input type="file" name="profilePic" />
+    </div>
+
+    <button type="submit" style="padding: 10px 20px; background-color: #ff66c4; color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: bold; cursor: pointer; transition: background-color .3s;"
+>Save Changes</button>
+  </form>
+</div>

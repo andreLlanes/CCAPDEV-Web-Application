@@ -1,0 +1,31 @@
+<div style="margin-top:20px;" class="posts">
+
+    <div class="post-header">
+        <h4>user: </h4>
+        <h3>{{post.author.username}}</h3>
+        <h3 id="post-topic" style="margin-left: auto; margin-right:20px;">{{post.topic}}</h2>
+    </div>
+
+        <div class="post">
+            <p id="post-content">{{post.content}}</p>
+        </div>
+    
+
+    <div class="post-footer">
+        <p id ="post-date">Posted on: {{formatDate post.creation}}
+        <div class="post-actions">
+            <span>Likes: {{post.likes.length}}</span>
+            <span>Dislikes: {{post.dislikes.length}}</span>
+        </div>
+    </div>
+       
+    <h3 class="comment-header">Comments:</h3>
+    <ul class="comment-list" id="comment-list">
+            {{#each post.comments}}
+            <li>
+                <p>{{this.user.username}}: {{this.content}}</p>
+                 <p class="comment-date">Posted on: {{formatDate this.createdAt}}</p>
+            </li>
+            {{/each}}
+    </ul>
+</div>

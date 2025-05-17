@@ -1,0 +1,104 @@
+@font-face {
+    font-family: Domine;
+    src: url(../fonts/Domine-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Domine-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Bubble;
+    src: url(../fonts/Rubik_Bubbles/RubikBubbles-Regular.ttf);
+}
+
+body{
+    background-image: url(../images/register.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container{
+    width: 500px;
+    
+    display: flex;
+    flex-direction: column;
+    margin: 200px auto;
+    justify-content: center;   
+    padding: 20px;
+    padding-bottom: 30px;
+    align-items: center;
+    
+    font-family: Domine;
+    border-radius: 20px;
+
+    background-color: rgb(255, 255, 255, 0.8);
+}
+
+.container #web-name{
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.input {
+    margin-bottom: 15px;
+    width: 100%;
+    display: block;
+   
+}
+
+.user-login form{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+   
+
+
+.input label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.input input {
+    width: auto;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid #743f62;
+}
+
+.user-login{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-login button {
+    width: 50%;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff66c4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #743f62;
+    color: white;
+}
